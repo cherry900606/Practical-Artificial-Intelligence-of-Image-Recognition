@@ -3,6 +3,8 @@ import numpy as np
 import cv2 as cv
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
+import urllib.request
+import os
 
 
 st.title("Please write your own words:")
@@ -26,6 +28,8 @@ canvas_result = st_canvas(
 
 # model predict
 if canvas_result.image_data is not None:
+    if not os.path.isfile('model_2.h5'):
+        urllib.request.urlretrieve('https://github.com/cherry900606/Practical-Artificial-Intelligence-of-Image-Recognition/raw/master/Final_Report/model_2.h5', 'model_2.h5')
     model = keras.models.load_model('model_2.h5', compile=False)
     drawing = cv.cvtColor(canvas_result.image_data, cv.COLOR_BGR2GRAY)
     cv.imshow('show',drawing)
