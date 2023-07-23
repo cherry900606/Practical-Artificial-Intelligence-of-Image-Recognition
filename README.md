@@ -21,3 +21,5 @@
 
 ## Final Report
 結合 MNIST 手寫字母資料集與 Kaggle 的手寫大寫字母資料集，訓練能分類數字與字母的模型，並且能讓使用者自己寫字由模型辨識。
+
+Demo: https://practical-artificial-intelligence-of-image-recognition.streamlit.app/
