@@ -3,5 +3,4 @@ numpy
 streamlit
 streamlit_drawable_canvas
 opencv-python-headless
-urllib
 os
