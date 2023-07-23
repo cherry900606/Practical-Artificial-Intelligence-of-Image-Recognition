@@ -48,6 +48,7 @@ while isEnd != True:
 	if isEnd:
 		break
 	drawing = cv.cvtColor(drawing, cv.COLOR_BGR2GRAY)
+	print(drawing.shape)
 	im = cv.resize(drawing, (32, 32))
 	label = model.predict(im.reshape(1, 32, 32))
 	pred = np.argmax(label)
